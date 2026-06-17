@@ -9,6 +9,4 @@ class Solution:
                 left = mid + 1
             else: 
                 return mid
-        if (right == -1 or nums[right] < target):
-            return right + 1
-        return right 
+        return left
