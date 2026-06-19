@@ -1,11 +1,6 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        s = []
-        
+        s = 0
         for num in nums:
-            if num not in s:
-                s.append(num)
-                
-            else:
-                s.remove(num)
-        return s[0]
+            s = s ^ num
+        return s
